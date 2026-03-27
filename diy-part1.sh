@@ -11,12 +11,18 @@
 #
 
 # Uncomment a feed source
-#sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
+# sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
-echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-#echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+# echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
+# echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
 # Add ADGuardHome source
-git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-adguardhome
+# git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-adguardhome
+# chmod -R 755 ./package/luci-app-adguardhome/*
+
+git clone https://github.com/sirpdboy/luci-app-adguardhome package/luci-app-adguardhome
 chmod -R 755 ./package/luci-app-adguardhome/*
+
+git clone https://github.com/EasyTier/luci-app-easytier/ package/luci-app-easytier
+chmod -R 755 ./package/luci-app-easytier/*
